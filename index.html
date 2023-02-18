@@ -4,11 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/icon.png">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Calculator</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div id="calculator" class="calc-dark">
+            <div class="theme-toggle">
+                <label for="theme-checkbox" id="theme-switcher" class="theme-switcher-dark">
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                    <input type="checkbox" id="theme-checkbox">
+                    <span class="theme-switch-button"></span>
+                </label>
+            </div>
+            <div id="display">
+                <p id="history">
+                    234+12
+                </p>
+                <p id="result">
+                    246
+                </p>
+            </div>
+            <div id="buttons" class="buttons-dark">
+                <div class="row">
+                    <button id="clear" class="funcional-btn">C</button>
+                    <button id="square-root-btn" class="funcional-btn">
+                        <i class="fa-solid fa-square-root-variable"></i>
+                    </button>
+                    <button id="square-btn" class="funcional-btn">
+                        x<sup>2</sup>
+                    </button>
+                    <button id="divide" class="math-operator">
+                        <i class="fa-solid fa-divide"></i>
+                    </button>
+                </div>
+                <div class="row">
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button id="multiply" class="math-operator">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="row">
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button id="subtract" class="math-operator">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </div>
+                <div class="row">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button id="add" class="math-operator">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+                <div class="row">
+                    <button id="decimal">.</button>
+                    <button>0</button>
+                    <button id="delete">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                    <button id="equals" class="math-operator">
+                        <i class="fa-solid fa-equals"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./app.js"></script>
 </body>
 </html>

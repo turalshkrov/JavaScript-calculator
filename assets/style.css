@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calculator {
+    width: 285px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.calc-dark {
+    background-color: #17171C;
+    color: #FFF;
+}
+.calc-light {
+    background-color: #f1f2f3;
+    color: #000;
+}
+
+.theme-toggle {
+    width: fit-content;
+    margin: 1rem auto 2rem;
+}
+#theme-checkbox {
+    display: none;
+}
+#theme-switcher {
+    width: 55px;
+    height: 30px;
+    padding: 7px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+}
+.theme-switcher-dark {
+    background-color: #2E2F38;
+}
+.theme-switcher-light {
+    background-color: #fff;
+}
+
+#theme-switcher i{
+    color: #4B5EFC;
+}
+.theme-switch-button {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #4E505F;
+    top: 5px;
+    left: 5px;
+    transition: .5s;
+}
+input:checked + .theme-switch-button{
+    transform: translateX(25px);
+    background-color: #D2D3DA;
+}
+#display {
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+}
+#history {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 60%;
+}
+#result {
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.row {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover {
+    transition: .4s;
+    opacity: 80%;
+}
+
+.buttons-dark button{
+    background-color: #2E2F38;
+    color: #FFF;
+}
+.buttons-light button{
+    background-color: #fff;
+    color: #000;
+}
+.buttons-dark .funcional-btn {
+    background-color: #4E505F !important;
+}
+.buttons-light .funcional-btn {
+    background-color: #D2D3DA !important;
+}
+.math-operator {
+    background-color: #4B5EFC !important;
+    color: #FFF !important;
+}
