@@ -91,7 +91,9 @@ const decimal = () => {
 }
 
 const square = () => {
-    resultDiv.innerText = Math.pow(resultDiv.innerText, 2);
+    String(Math.pow(resultDiv.innerText, 2)).length > 10 
+    ? resultDiv.innerText = Math.pow(resultDiv.innerText, 2).toExponential(5)
+    : resultDiv.innerText = Math.pow(resultDiv.innerText, 2)
 }
 
 const squareRoot = () => {
