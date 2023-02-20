@@ -34,7 +34,7 @@ const switchTheme = () => {
 
 const numberClick = (text) => {
     if (resultDiv.innerText.length < 10) {
-        resultDiv.innerText === '0' 
+        resultDiv.innerText === '0'
             ? resultDiv.innerText = text
             : resultDiv.innerText += text
         lastOperator = false;
@@ -92,7 +92,7 @@ const decimal = () => {
 
 const square = () => {
     String(Math.pow(resultDiv.innerText, 2)).length > 10 
-    ? resultDiv.innerText = Math.pow(resultDiv.innerText, 2).toExponential(5)
+    ? resultDiv.innerText = Math.pow(resultDiv.innerText, 2).toExponential(4)
     : resultDiv.innerText = Math.pow(resultDiv.innerText, 2)
 }
 
@@ -124,7 +124,9 @@ const calculate = () => {
             if(elm === 'add') result += newFormula[i+1]
             if(elm === 'subtract') result -= newFormula[i+1]
         })
-        String(result).length > 10 ?  resultDiv.innerText = result.toExponential(5)
+        result > 100000000
+        ?  resultDiv.innerText = result.toExponential(4)
+        : String(result - Math.floor(result)).length > 8 ?  resultDiv.innerText = result.toFixed(8)
         : resultDiv.innerText = result
         formula = [];
     }
