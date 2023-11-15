@@ -124,7 +124,7 @@ const calculate = () => {
             if(elm === 'add') result += newFormula[i+1]
             if(elm === 'subtract') result -= newFormula[i+1]
         })
-        result > 100000000
+        String(result).length > 9
         ?  resultDiv.innerText = result.toExponential(4)
         : String(result - Math.floor(result)).length > 8 ?  resultDiv.innerText = result.toFixed(8)
         : resultDiv.innerText = result
