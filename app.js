@@ -124,10 +124,12 @@ const calculate = () => {
             if(elm === 'add') result += newFormula[i+1]
             if(elm === 'subtract') result -= newFormula[i+1]
         })
-        String(result - Math.floor(result)).length > 8
-        ?  resultDiv.innerText = result.toFixed(8)
-        :  String(result).length > 9 ? resultDiv.innerText = result.toExponential(4) 
-        : resultDiv.innerText = result
+        resultDiv.innerText = String(result - Math.floor(result)).length > 8
+        ? result.toFixed(8)
+        : result;
+        resultDiv.innerText = String(result).length > 9 
+        ? resultDiv.innerText = result.toExponential(4) 
+        :  result;
         formula = [];
     }
 }
