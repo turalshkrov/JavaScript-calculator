@@ -97,7 +97,9 @@ const square = () => {
 }
 
 const squareRoot = () => {
-    resultDiv.innerText = Math.pow(resultDiv.innerText, 0.5).toFixed(6);
+    resultDiv.innerText = String(Math.pow(resultDiv.innerText, 0.5).toFixed(4)).length > 9
+    ? Number(Math.pow(resultDiv.innerText, 0.5).toFixed(4)).toExponential(4)
+    : Number(Math.pow(resultDiv.innerText, 0.5).toFixed(4));
 }
 
 const calculate = () => {
